@@ -8,8 +8,6 @@ var url = require('url');
 
 // Create a server
 http.createServer( function (request, response) {
-//Where does the console.log show up?  
-  console.log(url);
    // Parse the request containing file name
    var pathname = url.parse(request.url).pathname;
    // Print the name of the file for which request is made.
@@ -33,6 +31,7 @@ http.createServer( function (request, response) {
       }
       // Send the response body 
       response.end();
+      console.log("this is reponse.end", response);
    });   
 }).listen(8081);
 
